@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Sticker } from '../models/hero';
-import { HeroService } from '../services/hero.service';
+import { Sticker } from '../../models/Sticker';
+import { HeroService } from '../../services/hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -25,7 +25,7 @@ export class HeroesComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroService.addHero({ content: name } as Sticker)
+    this.heroService.addHero({ name: name } as Sticker)
       .subscribe(hero => {
         this.heroes.push(hero);
       });

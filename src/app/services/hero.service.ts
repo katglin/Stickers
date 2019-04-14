@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Sticker } from '../models/hero';
+import { Sticker } from '../models/Sticker';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

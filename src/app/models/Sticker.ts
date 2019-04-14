@@ -1,4 +1,4 @@
 export class Sticker {
     id: number;
-    content: string;
+    name: string;
   }

@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Sticker } from '../models/hero';
+import { Sticker } from '../models/Sticker';
 import { Injectable } from '@angular/core';
 
 @Injectable({

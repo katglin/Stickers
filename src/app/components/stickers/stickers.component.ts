@@ -10,6 +10,7 @@ import { StickerService } from '../../services/sticker.service';
 })
 export class StickersComponent implements OnInit {
   stickers: Sticker[];
+  newSticker: string;
 
   constructor(private stickerService: StickerService) { }
 
@@ -22,8 +23,9 @@ export class StickersComponent implements OnInit {
     .subscribe(stickers => this.stickers = stickers);
   }
 
-  add(name: string): void {
-    name = name.trim();
+  add(): void {
+    var name = this.newSticker.trim();
+    this.newSticker = null;
     if (!name) { return; }
     this.stickerService.addSticker({ name: name } as Sticker)
       .subscribe(sticker => {

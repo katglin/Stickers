@@ -19,10 +19,14 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "angular-font-awesome": "^3.1.2",
     "angular-in-memory-web-api": "^0.8.0",
     "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
+    "ngx-bootstrap": "^4.0.1",
+    "ngx-editor": "^4.1.0",
     "rxjs": "~6.3.3",
-    "tslib": "^1.9.0",
+    "tslib": "^1.9.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -30,9 +34,10 @@
     "@angular/cli": "~7.3.8",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -45,5 +50,18 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katglin/Stickers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katglin/Stickers/issues"
+  },
+  "homepage": "https://github.com/katglin/Stickers#readme"
 }

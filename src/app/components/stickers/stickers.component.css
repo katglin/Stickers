@@ -24,26 +24,11 @@
   text-decoration: none;
   position: relative;
   display: block;
+  padding: 10px 7px;
 }
 
 .stickers a:hover {
   color:#607D8B;
-}
-
-.stickers .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.8em 0 0.3em;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
-  margin-right: .8em;
 }
 
 button {

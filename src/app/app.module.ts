@@ -1,7 +1,10 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NgxEditorModule } from 'ngx-editor';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './services/in-memory-data.service';
@@ -20,6 +23,9 @@ import { CurrentDateComponent } from './components/current-date/current-date.com
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    TooltipModule.forRoot(),
+    AngularFontAwesomeModule,
+    NgxEditorModule,
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

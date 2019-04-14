@@ -1,32 +1,23 @@
-<h2>Your Stickers</h2>
-
 <app-sticker-search></app-sticker-search>
 
+<h2>Add Sticker</h2>
 <div>
-  <label>Add sticker:
-    <input #stickerName />
-  </label>
-
-
-
-  <button (click)="add(stickerName.value); stickerName.value=''">
-    Add
-  </button>
+  <label>Content:</label>
+  <app-ngx-editor id="new-sticker" height="100px" minHeight="100px" [placeholder]="'Enter text here...'" [(ngModel)]="newSticker" [spellcheck]="true"></app-ngx-editor>
+  <button (click)="add()">Add</button>
 </div>
 
+<h2>Your Stickers</h2>
 <ul class="stickers">
   <li *ngFor="let sticker of stickers">
     <a routerLink="/detail/{{sticker.id}}">
-      <span class="badge">
-        {{sticker.id}}
-      </span>
-      {{sticker.name}}
-      <p>
+      <div [innerHTML]="sticker.name"></div>
+      <div>
         <br/>
         <em>Created at: {{sticker.createdAt | date: 'yyyy-MM-dd hh:mm:ss'}}</em>
         <br/>
         <em>Modified at: {{sticker.modifiedAt? (sticker.modifiedAt | date: 'yyyy-MM-dd hh:mm:ss') : 'Not modified'}}</em>
-      </p>
+      </div>
     </a>
     <button class="delete" title="delete sticker"
       (click)="delete(sticker)">x</button>

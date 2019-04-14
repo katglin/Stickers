@@ -5,6 +5,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgxEditorModule } from 'ngx-editor';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './services/in-memory-data.service';
@@ -26,6 +27,7 @@ import { CurrentDateComponent } from './components/current-date/current-date.com
     TooltipModule.forRoot(),
     AngularFontAwesomeModule,
     NgxEditorModule,
+    ModalModule.forRoot(),
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

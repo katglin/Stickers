@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { Sticker } from '../../models/Sticker';
 import { StickerService } from '../../services/sticker.service';
@@ -11,8 +12,10 @@ import { StickerService } from '../../services/sticker.service';
 export class StickersComponent implements OnInit {
   stickers: Sticker[];
   newSticker: string;
+  deletedSticker: Sticker;
+  modalRef: BsModalRef;
 
-  constructor(private stickerService: StickerService) { }
+  constructor(private stickerService: StickerService, private modalService: BsModalService) { }
 
   ngOnInit() {
     this.getStickers();
@@ -36,6 +39,20 @@ export class StickersComponent implements OnInit {
   delete(sticker: Sticker): void {
     this.stickers = this.stickers.filter(h => h !== sticker);
     this.stickerService.deleteSticker(sticker).subscribe();
+  }
+
+  openModal(template: TemplateRef<any>, sticker) {
+    this.deletedSticker = sticker;
+    this.modalRef = this.modalService.show(template, {class: 'modal-sm modal-dialog-centered', ignoreBackdropClick: true, keyboard: false});
+  }
+
+  confirm(): void {
+    this.delete(this.deletedSticker);
+    this.modalRef.hide();
+  }
+
+  decline(): void {
+    this.modalRef.hide();
   }
 
 }

@@ -20,3 +20,25 @@ h1 {
   * {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+modal-container
+{
+    top: 0%;
+    left: 30%;
+    width: 40%;
+    height: 7em;
+    position: fixed;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 10px 10px;
+    background-color: white;
+}
+
+modal-container button {
+  display: inline-flex;
+  margin: 0 5px;
+}
+
+button {
+  padding: 10px 20px !important;
+}

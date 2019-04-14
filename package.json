@@ -24,6 +24,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^4.0.1",
+    "ngx-bootstrap-modal": "^2.0.1",
     "ngx-editor": "^4.1.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.3",

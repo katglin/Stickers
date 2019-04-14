@@ -20,6 +20,14 @@
       </div>
     </a>
     <button class="delete" title="delete sticker"
-      (click)="delete(sticker)">x</button>
+      (click)="openModal(template, sticker)">x</button>
   </li>
 </ul>
+
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Do you really want to delete the sticker?</p>
+    <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>

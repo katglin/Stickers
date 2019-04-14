@@ -51,6 +51,7 @@ export class StickerService {
   }
 
  addSticker (sticker: Sticker): Observable<Sticker> {
+   sticker.createdAt = new Date();
     return this.http.post<Sticker>(this.stickersUrl, sticker, httpOptions).pipe(
       catchError(this.handleError<Sticker>('addSticker'))
     );
@@ -66,6 +67,7 @@ export class StickerService {
   }
 
   updateSticker (sticker: Sticker): Observable<any> {
+    sticker.modifiedAt = new Date();
     return this.http.put(this.stickersUrl, sticker, httpOptions).pipe(
       catchError(this.handleError<any>('updateSticker'))
     );

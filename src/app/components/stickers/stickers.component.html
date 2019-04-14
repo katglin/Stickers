@@ -6,7 +6,9 @@
   <label>Add sticker:
     <input #stickerName />
   </label>
-  <!-- (click) passes input value to add() and then clears the input -->
+
+
+
   <button (click)="add(stickerName.value); stickerName.value=''">
     Add
   </button>
@@ -15,7 +17,16 @@
 <ul class="stickers">
   <li *ngFor="let sticker of stickers">
     <a routerLink="/detail/{{sticker.id}}">
-      <span class="badge">{{sticker.id}}</span> {{sticker.name}}
+      <span class="badge">
+        {{sticker.id}}
+      </span>
+      {{sticker.name}}
+      <p>
+        <br/>
+        <em>Created at: {{sticker.createdAt | date: 'yyyy-MM-dd hh:mm:ss'}}</em>
+        <br/>
+        <em>Modified at: {{sticker.modifiedAt? (sticker.modifiedAt | date: 'yyyy-MM-dd hh:mm:ss') : 'Not modified'}}</em>
+      </p>
     </a>
     <button class="delete" title="delete sticker"
       (click)="delete(sticker)">x</button>

@@ -3,7 +3,7 @@
   <div><span>id: </span>{{sticker.id}}</div>
   <div>
     <label>Content:</label>
-    <app-ngx-editor height="100px" minHeight="100px" [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="sticker.name"></app-ngx-editor>
+    <app-ngx-editor height="100px" minHeight="100px" [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="sticker.content"></app-ngx-editor>
   </div>
   <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>

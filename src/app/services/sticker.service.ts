@@ -45,7 +45,7 @@ export class StickerService {
     if (!term.trim()) {
       return of([]);
     }
-    return this.http.get<Sticker[]>(`${this.stickersUrl}/?name=${term}`).pipe(
+    return this.http.get<Sticker[]>(`${this.stickersUrl}/?content=${term}`).pipe(
       catchError(this.handleError<Sticker[]>('searchStickers', []))
     );
   }

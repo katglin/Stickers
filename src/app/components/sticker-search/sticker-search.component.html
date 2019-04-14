@@ -5,7 +5,7 @@
   <ul class="search-result">
     <li *ngFor="let sticker of stickers$ | async" >
       <a routerLink="/detail/{{sticker.id}}">
-        {{(sticker.name.length>10)? (sticker.name.substr(0, 10)+"...") : sticker.name}}
+        {{(sticker.content.length>10)? (sticker.content.substr(0, 10)+"...") : sticker.content}}
       </a>
     </li>
   </ul>

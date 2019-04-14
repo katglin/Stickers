@@ -11,7 +11,7 @@
 <ul class="stickers">
   <li *ngFor="let sticker of stickers">
     <a routerLink="/detail/{{sticker.id}}">
-      <div [innerHTML]="sticker.name"></div>
+      <div [innerHTML]="sticker.content"></div>
       <div>
         <br/>
         <em>Created at: {{sticker.createdAt | date: 'yyyy-MM-dd hh:mm:ss'}}</em>

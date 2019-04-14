@@ -1,6 +1,6 @@
 export class Sticker {
     id: number;
-    name: string;
+    content: string;
     createdAt: Date;
     modifiedAt: Date;
   }

@@ -24,10 +24,10 @@ export class StickersComponent implements OnInit {
   }
 
   add(): void {
-    var name = this.newSticker.trim();
+    var content = this.newSticker.trim();
     this.newSticker = null;
-    if (!name) { return; }
-    this.stickerService.addSticker({ name: name } as Sticker)
+    if (!content) { return; }
+    this.stickerService.addSticker({ content: content } as Sticker)
       .subscribe(sticker => {
         this.stickers.push(sticker);
       });
